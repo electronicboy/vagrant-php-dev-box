@@ -45,11 +45,11 @@ Changes
 ### unreleased
 ### v1.4.0
 
-* Transfer ansible playbooks to roles [#31]
+* Transfer ansible playbooks to roles dirkaholic/vagrant-php-dev-box#31
 
 ### v1.3.0
 
-* Switch provisioner to ansible [#18]
+* Switch provisioner to ansible dirkaholic/vagrant-php-dev-box#18
 
 ### v1.0.0
 
