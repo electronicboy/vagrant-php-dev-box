@@ -1,22 +1,26 @@
 ---
-- name: Add apt repository for PHP 5.6
+- name: Add apt repository for PHP 7.0
   apt_repository: repo='ppa:ondrej/php/ubuntu'
 
 - name: Install python-software-properties
   apt: name=python-software-properties state=present
 
-- name: Install php 5.6
-  apt: name=php5.6 state=present
+- name: Install php 7.0
+  apt: name=php7.0 state=present
 
 - name: Install required php packages
   apt: name={{ item }} state=present
   with_items:
-    - php5.6-mysql
-    - php5.6-intl
-    - php5.6-cli
-    - php5.6-mcrypt
-    - php5.6-mbstring
-    - php5.6-dom
+    - php7.0-intl
+    - php7.0-cli
+    - php7.0-gd
+    - php7.0-pdo
+    - php7.0-mbstring
+    - php7.0-tokenizer
+    - php7.0-bcmath
+    - php7.0-dom
+    - php7.0-curl
+    - php7.0-zip
 
 - name: Enable the MCrypt extension
   shell: phpenmod mcrypt
